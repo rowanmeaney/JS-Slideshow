@@ -1,0 +1,30 @@
+<script>
+  var i=0;
+  var images =[];
+  var time = 1000;
+
+  //Image List
+  images = ['image1.jpg','image2.jpg','image3.jpg'];
+
+  // Change Image
+  function changeImg() {
+    document.slide.src = images[i];
+
+    if(i<images.length - 1) {
+      i++;
+    } else {
+        i=0;
+      }
+
+    setTimeout("changeImg()",time);
+  }
+
+  window.onload = changeImg;
+</script>
+
+<h2>JavaScript Slideshow</h2>
+<img name="slide" width="400" height="200">
+
+<h1>Rowan Meaney</h1>
+<h4>709 691-1636</h4>
+<h4>rmmeaney@mun.ca</h4>
